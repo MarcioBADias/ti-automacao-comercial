@@ -7,13 +7,13 @@ import {
   ImageHightlight,
   TextCard,
   TextTitle,
-} from './style'
+} from './styles'
 import { BsPersonVcardFill } from 'react-icons/bs'
 import { IoReceiptSharp } from 'react-icons/io5'
 import { MdSystemUpdateAlt } from 'react-icons/md'
-import { Contact } from '../Form'
+import { Contact } from '../Contact'
 
-const HeroSection = () => {
+const Home = () => {
   return (
     <section>
       <Container
@@ -66,4 +66,4 @@ const HeroSection = () => {
   )
 }
 
-export { HeroSection }
+export { Home }

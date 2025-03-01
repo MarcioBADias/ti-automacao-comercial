@@ -3,7 +3,7 @@ import {
   FooterContent,
   FooterSection,
   SocialMediaIcons,
-} from './styled'
+} from './styles'
 
 const Footer = () => {
   return (

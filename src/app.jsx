@@ -1,16 +1,18 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import { Header } from './Components/Header'
-import { HeroSection } from './Components/HeroSection'
+import { Home } from './Components/Home'
 import { Features } from './Components/Features'
 import Testimonials from './Components/Testimonials'
 import { Pricing } from './Components/Pricing'
 import { Footer } from './Components/Footer'
+import { Solutions } from './Components/Solutions'
 
 const App = () => {
   return (
     <Router>
       <Header />
-      <HeroSection />
+      <Home />
+      <Solutions />
       <Features />
       <Testimonials />
       <Pricing />

@@ -2,7 +2,7 @@ import {
   TestimonialCard,
   TestimonialsContainer,
   TestimonialsWrapper,
-} from './style'
+} from './styles'
 
 const Testimonials = () => {
   const testimonialsList = [

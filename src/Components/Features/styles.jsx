@@ -4,7 +4,7 @@ import styled from 'styled-components'
 // Definindo o estilo do Features Section
 export const FeaturesContainer = styled.section`
   padding: 60px 100px;
-  background-color: #f5f5f5;
+  background-color: var(--color-light);
   text-align: center;
 
   h2 {

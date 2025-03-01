@@ -8,7 +8,7 @@ import {
   PricingPlan,
   PricingPrice,
   PricingTitle,
-} from './style'
+} from './styles'
 
 const Pricing = () => {
   return (

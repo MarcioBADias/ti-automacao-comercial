@@ -8,7 +8,7 @@ import {
   Logo,
   Menu,
   Nav,
-} from './style'
+} from './styles'
 
 const Header = () => {
   const [showMenu, setShowMenu] = useState(false)

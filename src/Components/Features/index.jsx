@@ -1,4 +1,4 @@
-import { FeatureCard, FeaturesContainer, FeaturesWrapper } from './style'
+import { FeatureCard, FeaturesContainer, FeaturesWrapper } from './styles'
 
 const Features = () => {
   const featureList = [

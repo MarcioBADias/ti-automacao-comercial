@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 // Estilo do footer
 export const FooterContainer = styled.footer`
-  background-color: #003d5b;
+  background-color: var(--color-primary);
   color: white;
   padding: 40px 100px;
   text-align: center;
