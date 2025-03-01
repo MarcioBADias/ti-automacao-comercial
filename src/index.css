@@ -1,13 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Atomic+Age&family=Bree+Serif&family=Inconsolata:wght@200..900&family=Telex&display=swap');
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+:root {
+  --color-light: #efefff;
+  --color-primary: #086ad8;
+  --color-secondary: #6b7398;
+}
+
 * {
+  box-sizing: border-box;
+  font-family: 'Telex', serif;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
 body {
   font-family: 'Arial', sans-serif;
-  background-color: #f5f5f5;
-  color: #333;
+  background: var(--color-light);
+  color: var(--color-primary);
   line-height: 1.6;
 }
 
@@ -46,12 +63,4 @@ img {
 
 p {
   margin-bottom: 1.5rem;
-}
-
-#root {
-  width: 100%;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
 }

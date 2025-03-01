@@ -1,61 +1,81 @@
-import React from 'react'
 import styled from 'styled-components'
+import { Element } from 'react-scroll'
 
-// Definindo o estilo do HeroSection
-export const HeroContainer = styled.section`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 50px 100px;
-  background-color: #003d5b;
-  color: white;
-  flex-direction: column;
-  text-align: center;
+export const Container = styled(Element)`
+  align-items: 'center';
+  display: 'flex';
+  justify-content: 'center';
+  margin-top: 20%;
+  padding: 1rem 2rem;
+  max-width: 100vw;
 
-  @media (min-width: 768px) {
-    flex-direction: row;
-    text-align: left;
+  @media (min-width: 840px) {
+    margin-top: 8%;
+    padding: 1rem;
+    width: 50%;
   }
 `
 
-export const HeroText = styled.div`
-  max-width: 500px;
+export const TextTitle = styled.div`
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+`
 
-  h1 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-    font-weight: 700;
-  }
+export const CardContainer = styled.div`
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+`
+export const Card = styled.div`
+  align-items: center;
+  background: #ffffff;
+  display: flex;
+  border-radius: 10px;
+  border: 2px solid black;
+  box-shadow: 5px 5px 0px black;
+  font-family: Arial, sans-serif;
+  margin-top: 1rem;
+  padding: 0.5rem;
+  width: 40%;
+`
 
-  p {
-    font-size: 1.25rem;
-    margin-bottom: 30px;
-  }
+export const Icon = styled.div`
+  color: var(--color-primary);
+  font-size: 2rem;
+`
 
-  button {
-    padding: 15px 30px;
-    font-size: 1rem;
-    background-color: #f24e1e;
-    border: none;
-    color: white;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
+export const TextCard = styled.p`
+  color: black;
+  font-size: 1rem;
+  font-weight: bold;
+  margin-top: 5px;
+  padding: 0.5rem;
+`
 
-    &:hover {
-      background-color: #d63f18;
+export const ImageHightlight = styled.img`
+  align-items: center;
+  width: 400px;
+  max-width: 100vw;
+`
+
+/*export const AnimatedLogo = styled.img`
+  margin: 1rem 0 -5rem 0rem;
+  width: 250px;
+  animation: spinHorizontal 5s linear infinite;
+
+  @keyframes spinHorizontal {
+    0% {
+      transform: rotateY(0deg);
+    }
+    100% {
+      transform: rotateY(360deg);
     }
   }
-`
 
-export const HeroImage = styled.div`
-  img {
-    width: 100%;
-    max-width: 500px;
-    border-radius: 10px;
+  @media (min-width: 840px) {
+    align-items: center;
+    margin: 1rem 0 -5rem 15rem;
+    width: 35%;
   }
-
-  @media (max-width: 768px) {
-    margin-top: 20px;
-  }
-`
+`*/
