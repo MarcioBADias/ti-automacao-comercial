@@ -6,17 +6,15 @@ export const Container = styled(Element)`
   background: var(--color-primary);
   //display: flex;
   //ustify-content: center;
-  padding: 1rem 2rem;
   margin-top: 10%;
 
   @media (min-width: 840px) {
     padding: 1rem;
-    width: 100vw;
   }
 `
 export const Section = styled.section`
   color: var(--color-primary);
-  padding: 50;
+  padding: 50px;
 `
 
 export const TableContainer = styled.div`
@@ -39,7 +37,7 @@ export const Column = styled.div`
   flex: 1;
 `
 export const TitleColumn = styled.div`
-   display: flex;
+  display: flex;
   justify-content: center;
   align-items: center;
   min-height: 30%;
@@ -49,7 +47,7 @@ export const TitleColumn = styled.div`
   &.solutions {
     background: #009c2a;
   }
-` 
+`
 
 export const Title = styled.h2`
   color: var(--color-light);

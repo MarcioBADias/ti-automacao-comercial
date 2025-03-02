@@ -34,7 +34,7 @@ const Solutions = () => {
     <Container name="solutions" id="solutions">
       <Section>
         <div style={{ width: '70%' }}>
-          <h1 style={{ color: '#ffffff', width: '90%', fontSize: 40 }}>
+          <h1 style={{ color: '#ffffff', width: '90%', fontSize: 20 }}>
             Descubra como o PDV Legal vai aumentar a eficiência e eliminar os
             erros no seu bar, balada ou restaurante.
           </h1>
@@ -42,8 +42,8 @@ const Solutions = () => {
             style={{
               color: '#ffffff',
               width: '80%',
-              fontSize: 20,
-              marginTop: 100,
+              fontSize: 15,
+              marginTop: 60,
             }}
           >
             O PDV Legal unifica pedidos, pagamentos e dados de consumo ,
@@ -89,7 +89,7 @@ const Solutions = () => {
           </Table>
         </TableContainer>
       </Section>
-      <div style={{ marginLeft: '9%', width: '100vw' }}>
+      <div style={{ marginLeft: '9%' }}>
         <h1
           style={{
             color: '#ffffff',
