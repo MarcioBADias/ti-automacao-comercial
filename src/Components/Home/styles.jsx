@@ -2,14 +2,12 @@ import styled from 'styled-components'
 import { Element } from 'react-scroll'
 
 export const Container = styled(Element)`
-  align-items: 'center';
-  display: 'flex';
-  justify-content: 'center';
   margin-top: 20%;
   padding: 1rem 2rem;
   max-width: 100vw;
 
   @media (min-width: 840px) {
+    display: flex;
     margin-top: 8%;
     padding: 1rem;
     width: 50%;
@@ -17,7 +15,7 @@ export const Container = styled(Element)`
 `
 
 export const TextTitle = styled.div`
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: bold;
   text-align: center;
 `
@@ -55,8 +53,14 @@ export const TextCard = styled.p`
 
 export const ImageHightlight = styled.img`
   align-items: center;
+  display: flex;
   width: 400px;
   max-width: 100vw;
+
+  @media (min-width: 840px) {
+    margin: 8% 0 0 30%;
+    width: 550px;
+  }
 `
 
 /*export const AnimatedLogo = styled.img`

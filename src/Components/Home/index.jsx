@@ -15,8 +15,8 @@ import { Contact } from '../Contact'
 
 const Home = () => {
   return (
-    <section>
-      <Container
+    <Container>
+      <div
         name="home"
         id="home"
         className="prev_about"
@@ -54,15 +54,15 @@ const Home = () => {
         </CardContainer>
 
         <Contact />
-      </Container>
-      <Container>
+      </div>
+      <div>
         <ImageHightlight
           src="/maquininha.png"
           alt="Arte da Logo"
           className="logo_art"
         />
-      </Container>
-    </section>
+      </div>
+    </Container>
   )
 }
 
