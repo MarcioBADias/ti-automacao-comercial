@@ -1,5 +1,5 @@
 import React, { useEffect, useReducer } from 'react'
-import { Card, CardContainer, Container, TextCard } from './styles'
+import { Card, CardContainer, CardImage, Container, TextCard } from './styles'
 
 const reduce = (state, action) => {
   if (action.type === 'set_infos') {
@@ -38,9 +38,8 @@ const Services = () => {
           {status.infos.map((info, index) => (
             <Card key={index}>
               <div>
-                <img
+                <CardImage
                   src={`${info.subtitle}.png`}
-                  style={{ width: 100 }}
                   alt={`Foto de ${info.subtitle}`}
                 />
               </div>
