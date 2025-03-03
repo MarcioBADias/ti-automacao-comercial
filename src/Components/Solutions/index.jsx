@@ -4,6 +4,7 @@ import { MdCancel } from 'react-icons/md'
 import {
   Column,
   Container,
+  Image,
   List,
   ListItem,
   Section,
@@ -33,6 +34,9 @@ const Solutions = () => {
   return (
     <Container name="solutions" id="solutions">
       <Section>
+        <div>
+          <Image src="/PDV_Legal_Symbol.png" alt="PDV Legal" />
+        </div>
         <div style={{ width: '70%' }}>
           <h1 style={{ color: '#ffffff', width: '90%', fontSize: 20 }}>
             Descubra como o PDV Legal vai aumentar a eficiência e eliminar os
@@ -50,13 +54,6 @@ const Solutions = () => {
             tornando sua operação mais ágil e precisa. Confira:
           </h2>
         </div>
-        <div>
-          <img
-            src="/PDV_Legal_Symbol.png"
-            alt="PDV Legal"
-            style={{ width: 400, marginTop: -18 }}
-          />
-        </div>
       </Section>
       <Section>
         <TableContainer>
@@ -68,7 +65,9 @@ const Solutions = () => {
               <List>
                 {problems.map((problem, index) => (
                   <ListItem key={index}>
-                    <MdCancel />
+                    <MdCancel
+                      style={{ color: 'red', paddingRight: 10, width: 60 }}
+                    />
                     {problem}
                   </ListItem>
                 ))}
@@ -81,7 +80,10 @@ const Solutions = () => {
               <List>
                 {solutions.map((solution, index) => (
                   <ListItem key={index} className="solution">
-                    <TbRosetteDiscountCheckFilled /> {solution}
+                    <TbRosetteDiscountCheckFilled
+                      style={{ color: 'green', paddingRight: 10, width: 60 }}
+                    />{' '}
+                    {solution}
                   </ListItem>
                 ))}
               </List>

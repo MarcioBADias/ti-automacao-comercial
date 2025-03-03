@@ -2,10 +2,7 @@ import { Element } from 'react-scroll'
 import styled from 'styled-components'
 
 export const Container = styled(Element)`
-  //align-items: center;
   background: var(--color-primary);
-  //display: flex;
-  //ustify-content: center;
   margin-top: 10%;
 
   @media (min-width: 840px) {
@@ -15,19 +12,34 @@ export const Container = styled(Element)`
 export const Section = styled.section`
   color: var(--color-primary);
   padding: 50px;
-`
 
+  @media (min-width: 840px) {
+    display: flex;
+  }
+`
+export const Image = styled.img`
+  width: 400px;
+  margin: -13% 0 0 -13%;
+  transform: rotateY(180deg);
+
+  @media (min-width: 840px) {
+    width: 600px;
+    margin: -14% 0 0 -15%;
+  }
+`
 export const TableContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20px;
   border-radius: 10px;
+
+  @media (min-width: 840px) {
+    padding: 1rem;
+  }
 `
 
 export const Table = styled.div`
   display: flex;
-  width: 80%;
   border-radius: 10px;
   overflow: hidden;
 `
@@ -37,10 +49,12 @@ export const Column = styled.div`
   flex: 1;
 `
 export const TitleColumn = styled.div`
+  align-items: center;
   display: flex;
   justify-content: center;
-  align-items: center;
-  min-height: 30%;
+  font-size: 0.8rem;
+  min-height: 20%;
+  padding: 1rem;
   &.problems {
     background: #c90000;
   }
@@ -65,6 +79,6 @@ export const ListItem = styled.li`
   display: flex;
   align-items: center;
   margin-bottom: 15px;
-  font-size: 18px;
+  font-size: 1rem;
   padding: 1rem;
 `
