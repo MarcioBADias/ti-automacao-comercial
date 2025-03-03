@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 export const Container = styled(Element)`
   display: flex;
-  margin-top: 10%;
+  margin: 5% 0;
 
   @media (min-width: 840px) {
   }

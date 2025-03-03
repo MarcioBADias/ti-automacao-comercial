@@ -1,10 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
 
-// Definindo o estilo do Features Section
 export const FeaturesContainer = styled.section`
   padding: 60px 100px;
-  background-color: var(--color-light);
+  background-color: #ffffff;
   text-align: center;
 
   h2 {
@@ -30,7 +29,8 @@ export const FeaturesWrapper = styled.div`
 `
 
 export const FeatureCard = styled.div`
-  background-color: white;
+  background: var(--color-primary);
+  color: var(--color-light);
   padding: 30px;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -51,6 +51,5 @@ export const FeatureCard = styled.div`
 
   p {
     font-size: 1.125rem;
-    color: #555;
   }
 `
