@@ -7,22 +7,22 @@ import {
 const Testimonials = () => {
   const testimonialsList = [
     {
-      name: 'João Silva',
-      title: 'Empresário',
+      name: 'Fishbone',
+      title: 'Boate',
       testimonial:
-        'O sistema TI Automacoes transformou a maneira como gerenciamos nossas vendas. A automação trouxe agilidade e segurança para o meu negócio.',
+        'À TI Consultoria, agradecemos por nos conceder um trabalho de excelência nesses últimos anos, com proatividade, cordialidade e eficiência.',
     },
     {
-      name: 'Maria Oliveira',
-      title: 'Gerente de Vendas',
+      name: 'Outros 500',
+      title: 'Restaurante',
       testimonial:
-        'A ferramenta tem tudo o que precisamos para otimizar os processos de vendas. Ela é intuitiva, fácil de usar e extremamente eficiente.',
+        'Sou super fã do trabalho de vocês, sempre dispostos a nos ajudar em tudo que precisamos. Competência e profissionalismo são o diferencial dessa empresa. Adoro e super indico! Vocês são indispensáveis na minha empresa.',
     },
     {
-      name: 'Carlos Pereira',
-      title: 'Proprietário de Restaurante',
+      name: 'Kazebre',
+      title: 'bar',
       testimonial:
-        'Com o TI Automacoes, conseguimos melhorar a gestão de nosso estoque e as vendas de maneira eficaz, sem complicações.',
+        'Nossa experiência no Kazebre com o sistema é muito boa. Um sistema confiável, muito completo e estável. A equipe de suporte e atendimento sempre muito atenciosos e prestativos, sempre apresentando soluções quando acionados. Certeza de que indico os serviços do sistema para os comércios que precisem.',
     },
   ]
 
