@@ -57,7 +57,7 @@ const Home = () => {
       </div>
       <div>
         <ImageHightlight
-          src="/maquininha.png"
+          src="/pdvlegal-mobile.png"
           alt="Arte da Logo"
           className="logo_art"
         />

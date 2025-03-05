@@ -42,4 +42,4 @@ const Testimonials = () => {
   )
 }
 
-export default Testimonials
+export { Testimonials }
