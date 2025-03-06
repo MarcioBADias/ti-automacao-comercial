@@ -6,6 +6,8 @@ import luigi from '/luigi.jpg'
 import outro_500 from '/outro_500.jpg'
 import patio_michou from '/patio_michou.png'
 import the_duck_pub from '/the_duck_pub.jpg'
+import MarkL from '/mark-L.svg'
+import MarkR from '/mark-R.svg'
 
 import * as C from './styles'
 const Clients = () => {
