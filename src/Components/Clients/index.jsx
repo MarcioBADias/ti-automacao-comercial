@@ -98,33 +98,29 @@ const Clients = () => {
         <C.TextArea>
           <C.Mark src={MarkL} size={80} alt="Simbulo de aspas" />
           <C.Text>
-            "O CheckSpeech AI é incrível! A transcrição é precisa e a
-            interpretação de sentimentos ajuda muito em nossa comunicação com os
-            clientes."
+            "À TI Consultoria, agradecemos por nos conceder um trabalho de excelência nesses 
+            últimos anos, com proatividade, cordialidade e eficiência."
+            <p>- Fishbone</p>
           </C.Text>
         </C.TextArea>
         <C.TextArea>
           <C.Text>
-            "O CheckSpeech AI nos permitiu transcrever facilmente nossas
-            conversas com os clientes e analisar seus sentimentos para melhorar
-            nossa comunicação. É uma ferramenta essencial!"
+            "Sou super fã do trabalho de vocês, sempre dispostos a nos ajudar em tudo que precisamos. 
+            Competência e profissionalismo são o diferencial dessa empresa. Adoro e super indico! 
+            Vocês são indispensáveis na minha empresa."
+            <p>- Outros 500</p>
           </C.Text>
           <C.Mark src={MarkR} size={80} alt="Simbulo de aspas" />
         </C.TextArea>
         <C.TextArea>
           <C.Mark src={MarkL} size={80} alt="Simbulo de aspas" />
           <C.Text>
-            "O CheckSpeech AI é muito preciso na transcrição e na interpretação
-            de sentimentos, o que é muito útil em minhas pesquisas acadêmicas."
+            "Nossa experiência no Kazebre com o sistema é muito boa. Um sistema confiável, muito 
+            completo e estável. A equipe de suporte e atendimento sempre muito atenciosos e prestativos, 
+            sempre apresentando soluções quando acionados. Certeza de que indico os serviços do sistema 
+            para os comércios que precisem."
+            <p>- Kazebre</p>
           </C.Text>
-        </C.TextArea>
-        <C.TextArea>
-          <C.Text>
-            "O CheckSpeech AI é fácil de usar e nos deu insights valiosos sobre
-            a opinião do consumidor. É uma ferramenta essencial para o
-            marketing."
-          </C.Text>
-          <C.Mark src={MarkR} size={80} alt="Simbulo de aspas" />
         </C.TextArea>
       </C.Container>
     </C.Section>

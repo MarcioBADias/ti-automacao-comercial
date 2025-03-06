@@ -77,28 +77,23 @@ export const LogosContainer = styled.div`
 `;
 
 export const LogosCli = styled.img`
-    height: 100px;
-    width: 200px;
+    height: 300px;
+        margin: 0 1rem 0 1rem;
+        width: 300px;
     filter: grayscale(100%);
     opacity: 0.5;
-    transition: all 0.2s ease-in-out;
+    transition: all 1s ease-in-out;
 
      &:hover {
         filter: grayscale(0%);
         opacity: 1;
         cursor: pointer;
     }
-
-    @media (max-width: 840px) {
-        height: 150px;
-        margin-top: 4rem;
-        width: 300px;
-    }
 `;
 
 export const TextArea = styled.div`
     display: flex;
-    margin-top: 1rem;
+    padding: 1rem
 `;
 
 
