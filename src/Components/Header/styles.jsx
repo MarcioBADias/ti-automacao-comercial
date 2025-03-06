@@ -22,6 +22,7 @@ export const Logo = styled.img`
 `
 
 export const Menu = styled.ul`
+  color: var(--color-primary);
   display: flex;
   list-style: none;
   margin: 0;
@@ -29,13 +30,13 @@ export const Menu = styled.ul`
   height: auto;
 
   @media (max-width: 840px) {
-    background: rgb(24, 77, 30);
     background: linear-gradient(
       90deg,
       var(--color-primary) 0%,
       var(--color-secondary) 58%
     );
     backdrop-filter: blur(3px);
+    color: var(--color-light);
     display: ${({ showMenu }) => (showMenu ? 'flex' : 'none')};
     flex-direction: column;
     height: 100vh;
@@ -85,6 +86,7 @@ export const ButtonMenu = styled.div`
 
   @media (max-width: 840px) {
     display: flex;
+    color: var(--color-primary);
   }
 `
 
@@ -94,7 +96,7 @@ export const IconMenu = styled.i`
     width: 50px;
   }
   :hover {
-    color: var(--color-light);
+    color: var(--color-secondary);
     cursor: pointer;
   }
 `
