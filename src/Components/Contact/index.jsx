@@ -1,7 +1,8 @@
-import React from 'react'
-import { RiArrowDownDoubleLine } from 'react-icons/ri'
-import { Formik, Form } from 'formik'
-import * as Yup from 'yup'
+import React from 'react';
+import { RiArrowDownDoubleLine } from 'react-icons/ri';
+import { Formik, Form, Field } from 'formik';
+import * as Yup from 'yup';
+import { db, collection, addDoc } from '../../firebase';
 import {
   Button,
   Container,
@@ -10,19 +11,30 @@ import {
   Section,
   Title,
   TextArea,
-} from './styles'
-import { Icon } from './styles'
+} from './styles';
+import { Icon } from './styles';
 
 const schema = Yup.object().shape({
-  fullName: Yup.string().required(),
-  whatsapp: Yup.number().min(11).required(),
-  email: Yup.string().email().required(),
-  instagram: Yup.string().required(),
-  revenues: Yup.number().required(),
-  devices: Yup.string().required(),
-})
+  fullName: Yup.string().required("Campo obrigatório"),
+  whatsapp: Yup.string().matches(/^\d{11}$/, "Deve ter 11 dígitos").required("Campo obrigatório"),
+  email: Yup.string().email("E-mail inválido").required("Campo obrigatório"),
+  instagram: Yup.string().required("Campo obrigatório"),
+  revenues: Yup.number().required("Campo obrigatório"),
+  devices: Yup.string().required("Campo obrigatório"),
+});
 
 const Contact = () => {
+  const handleSubmit = async (values, { resetForm }) => {
+    try {
+      await addDoc(collection(db, "contacts"), values);
+      alert("Dados enviados para o Firebase!");
+      resetForm();
+    } catch (error) {
+      alert("Erro ao enviar dados.");
+      console.error("Erro Firebase:", error);
+    }
+  };
+
   return (
     <Section id="contacts">
       <Formik
@@ -35,50 +47,43 @@ const Contact = () => {
           revenues: '',
           devices: '',
         }}
+        onSubmit={handleSubmit}
       >
-        {({ errors }) => (
+        {({ errors, touched }) => (
           <Form>
             <Container>
               <TextArea>
                 <Icon>
                   <RiArrowDownDoubleLine />
                 </Icon>
-                <Title>Preencha o formulario e aproveite agora</Title>
+                <Title>Preencha o formulário e aproveite agora</Title>
               </TextArea>
-              <Input name="fullName" type="text" placeholder="Nome Completo" />
-              {errors.fullName && (
-                <ErrorMessage>Campo obrigatótio</ErrorMessage>
-              )}
-              <Input name="email" type="text" placeholder="E-Mail" />
-              {errors.email && <ErrorMessage>Campo obrigatótio</ErrorMessage>}
-              <Input
-                name="whatsapp"
-                type="text"
-                placeholder="Insira o numero do Whatsapp"
-              />
-              {errors.whatsapp && (
-                <ErrorMessage>Campo obrigatótio</ErrorMessage>
-              )}
-              <Input name="instagram" type="text" placeholder="Instagram" />
-              {errors.instagram && (
-                <ErrorMessage>Campo obrigatótio</ErrorMessage>
-              )}
-              <Input name="revenues" type="text" placeholder="Faturamento" />
-              {errors.revenues && (
-                <ErrorMessage>Campo obrigatótio</ErrorMessage>
-              )}
-              <Input
-                name="devices"
-                type="text"
-                placeholder="Trabalha com cardapio ou balanca?"
-              />
-              {errors.devices && <ErrorMessage>Campo obrigatótio</ErrorMessage>}
-              <Button>Quero Falar com Especialista</Button>
+              
+              <Field as={Input} name="fullName" type="text" placeholder="Nome Completo" />
+              {errors.fullName && touched.fullName && <ErrorMessage>{errors.fullName}</ErrorMessage>}
+
+              <Field as={Input} name="email" type="text" placeholder="E-Mail" />
+              {errors.email && touched.email && <ErrorMessage>{errors.email}</ErrorMessage>}
+
+              <Field as={Input} name="whatsapp" type="text" placeholder="Insira o número do Whatsapp" />
+              {errors.whatsapp && touched.whatsapp && <ErrorMessage>{errors.whatsapp}</ErrorMessage>}
+
+              <Field as={Input} name="instagram" type="text" placeholder="Instagram" />
+              {errors.instagram && touched.instagram && <ErrorMessage>{errors.instagram}</ErrorMessage>}
+
+              <Field as={Input} name="revenues" type="text" placeholder="Faturamento" />
+              {errors.revenues && touched.revenues && <ErrorMessage>{errors.revenues}</ErrorMessage>}
+
+              <Field as={Input} name="devices" type="text" placeholder="Trabalha com cardápio ou balança?" />
+              {errors.devices && touched.devices && <ErrorMessage>{errors.devices}</ErrorMessage>}
+
+              <Button type="submit">Quero Falar com Especialista</Button>
             </Container>
           </Form>
         )}
       </Formik>
     </Section>
-  )
-}
-export { Contact }
+  );
+};
+
+export { Contact };
