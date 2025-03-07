@@ -30,14 +30,14 @@ const Header = () => {
           <ItemMenu>Início</ItemMenu>
         </LinkItem>
         <LinkItem
-          to="products"
+          to="solutions"
           spy={true}
           smooth={true}
           offset={-80}
           duration={800}
           onClick={() => setShowMenu(!showMenu)}
         >
-          <ItemMenu>Produtos</ItemMenu>
+          <ItemMenu>Soluções</ItemMenu>
         </LinkItem>
         <LinkItem
           to="services"
@@ -50,14 +50,24 @@ const Header = () => {
           <ItemMenu>Serviços</ItemMenu>
         </LinkItem>
         <LinkItem
-          to="contacts"
+          to="features"
           spy={true}
           smooth={true}
           offset={-80}
           duration={800}
           onClick={() => setShowMenu(!showMenu)}
         >
-          <ItemMenu>Contato</ItemMenu>
+          <ItemMenu>Qualidades</ItemMenu>
+        </LinkItem>
+        <LinkItem
+          to="clients"
+          spy={true}
+          smooth={true}
+          offset={-80}
+          duration={800}
+          onClick={() => setShowMenu(!showMenu)}
+        >
+          <ItemMenu>Clientes</ItemMenu>
         </LinkItem>
       </Menu>
 
@@ -69,9 +79,9 @@ const Header = () => {
             <CgMenuRightAlt>
               <Menu showMenu={showMenu}>
                 <ItemMenu>Início</ItemMenu>
-                <ItemMenu>Produtos</ItemMenu>
+                <ItemMenu>Soluções</ItemMenu>
                 <ItemMenu>Serviços</ItemMenu>
-                <ItemMenu>Contatos</ItemMenu>
+                <ItemMenu>Clinetes</ItemMenu>
               </Menu>
             </CgMenuRightAlt>
           )}
