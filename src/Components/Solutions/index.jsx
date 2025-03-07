@@ -13,6 +13,7 @@ import {
   Title,
   TitleColumn,
 } from './styles'
+import { ScrollBtn } from '../ScrollBtn'
 
 const Solutions = () => {
   const problems = [
@@ -103,7 +104,9 @@ const Solutions = () => {
           Se você enfrenta atrasos, erros de comandas e confusão no fechamento,
           é hora de mudar.
         </h1>
-        <button> Fale com um especialista</button>
+        <ScrollBtn 
+        text='Fale com um especialista'
+        />
       </div>
     </Container>
   )

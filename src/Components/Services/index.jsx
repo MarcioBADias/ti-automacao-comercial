@@ -1,5 +1,6 @@
 import React, { useEffect, useReducer } from 'react'
 import { Card, CardContainer, CardImage, Container, TextCard } from './styles'
+import { ScrollBtn } from '../ScrollBtn'
 
 const reduce = (state, action) => {
   if (action.type === 'set_infos') {
@@ -31,6 +32,7 @@ const Services = () => {
   }, [])
 
   return (
+    <>
     <Container name="services" id="services">
       <div>
         <h1 style={{ textAlign: 'center' }}>Segmentos</h1>
@@ -52,6 +54,8 @@ const Services = () => {
         </CardContainer>
       </div>
     </Container>
+      <ScrollBtn text='Quero PDV Legal para meu Negócio' />
+    </>
   )
 }
 

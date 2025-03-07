@@ -10,6 +10,7 @@ import MarkL from '/mark-L.svg'
 import MarkR from '/mark-R.svg'
 
 import * as C from './styles'
+import { ScrollBtn } from '../ScrollBtn'
 const Clients = () => {
   const [responsiveWidth, setResponsiveWidth] = useState(window.innerWidth)
 
@@ -30,6 +31,7 @@ const Clients = () => {
   ]
 
   return (
+    <>
     <C.Section id="clients">
       <C.Container
         style={{
@@ -124,6 +126,8 @@ const Clients = () => {
         </C.TextArea>
       </C.Container>
     </C.Section>
+      <ScrollBtn text='Quero me tornar PDV Legal' />
+    </>
   )
 }
 

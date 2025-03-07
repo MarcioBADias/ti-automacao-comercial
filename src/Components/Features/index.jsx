@@ -1,3 +1,4 @@
+import { ScrollBtn } from '../ScrollBtn'
 import { FeatureCard, FeaturesContainer, FeaturesWrapper } from './styles'
 
 const Features = () => {
@@ -30,6 +31,7 @@ const Features = () => {
           </FeatureCard>
         ))}
       </FeaturesWrapper>
+      <ScrollBtn text='Como começar a usar o PDV Legal' />
     </FeaturesContainer>
   )
 }
