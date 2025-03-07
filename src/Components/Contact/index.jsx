@@ -1,8 +1,7 @@
-import React from 'react';
-import { RiArrowDownDoubleLine } from 'react-icons/ri';
-import { Formik, Form, Field } from 'formik';
-import * as Yup from 'yup';
-import { db, collection, addDoc } from '../../firebase';
+import React from 'react'
+import { RiArrowDownDoubleLine } from 'react-icons/ri'
+import { Formik, Form, Field } from 'formik'
+import * as Yup from 'yup'
 import {
   Button,
   Container,
@@ -11,8 +10,8 @@ import {
   Section,
   Title,
   TextArea,
-} from './styles';
-import { Icon } from './styles';
+} from './styles'
+import { Icon } from './styles'
 
 const schema = Yup.object().shape({
   fullName: Yup.string().required("Campo obrigatório"),
@@ -21,19 +20,28 @@ const schema = Yup.object().shape({
   instagram: Yup.string().required("Campo obrigatório"),
   revenues: Yup.number().required("Campo obrigatório"),
   devices: Yup.string().required("Campo obrigatório"),
-});
+})
 
 const Contact = () => {
-  const handleSubmit = async (values, { resetForm }) => {
-    try {
-      await addDoc(collection(db, "contacts"), values);
-      alert("Dados enviados para o Firebase!");
-      resetForm();
-    } catch (error) {
-      alert("Erro ao enviar dados.");
-      console.error("Erro Firebase:", error);
-    }
-  };
+  const handleSubmit = (values, { resetForm }) => {
+    const formData = new URLSearchParams(values).toString();
+  
+    fetch("https://formsubmit.co/marcius.dev.estudos@gmail.com", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: formData,
+    })
+    .then(response => {
+      if (response.ok) {
+        alert("Formulário enviado com sucesso!");
+        resetForm();
+      } else {
+        alert("Erro ao enviar o formulário.");
+      }
+    })
+    .catch(() => alert("Erro na conexão com o servidor."));
+  }
+  
 
   return (
     <Section id="contacts">
@@ -83,7 +91,7 @@ const Contact = () => {
         )}
       </Formik>
     </Section>
-  );
-};
+  )
+}
 
-export { Contact };
+export { Contact }
