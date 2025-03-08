@@ -32,7 +32,6 @@ const Services = () => {
   }, [])
 
   return (
-    <>
     <Container name="services" id="services">
       <div>
         <h1 style={{ textAlign: 'center' }}>Segmentos</h1>
@@ -53,9 +52,8 @@ const Services = () => {
           ))}
         </CardContainer>
       </div>
+      <ScrollBtn text="Quero PDV Legal para meu Negócio" />
     </Container>
-      <ScrollBtn text='Quero PDV Legal para meu Negócio' />
-    </>
   )
 }
 
