@@ -104,10 +104,12 @@ const Solutions = () => {
           Se você enfrenta atrasos, erros de comandas e confusão no fechamento,
           é hora de mudar.
         </h1>
-        <ScrollBtn 
-        text='Fale com um especialista'
-        />
       </div>
+      <ScrollBtn
+        bg={'var(--color-light)'}
+        color={'var(--color-primary)'}
+        text="Fale com um especialista"
+      />
     </Container>
   )
 }

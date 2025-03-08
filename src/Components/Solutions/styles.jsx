@@ -2,7 +2,10 @@ import { Element } from 'react-scroll'
 import styled from 'styled-components'
 
 export const Container = styled(Element)`
+  align-items: center;
   background: var(--color-primary);
+  display: flex;
+  flex-direction: column;
   margin-top: 10%;
 
   @media (min-width: 840px) {
