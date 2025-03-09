@@ -9,6 +9,13 @@ export const Section = styled.section`
 `
 
 export const Container = styled.div`
+  display: flex;
+  @media (max-width: 840px) {
+    display: inline-block;
+  }
+`
+
+export const InfoContainer = styled.div`
   align-items: center;
   display: flex;
   flex-direction: column;
@@ -35,7 +42,7 @@ export const LogosContainer = styled.div`
   flex-wrap: nowrap;
   margin-top: 5rem;
   height: 100%;
-  width: 50%;
+  width: 70%;
 
   @keyframes logocarrocel {
     0% {
@@ -59,9 +66,9 @@ export const LogosContainer = styled.div`
 `
 
 export const LogosCli = styled.img`
-  height: 300px;
-  margin: 0 1rem 0 1rem;
-  width: 300px;
+  height: 400px;
+  margin: 3rem 1rem 0 1rem;
+  width: 400px;
   filter: grayscale(100%);
   opacity: 0.5;
   transition: all 1s ease-in-out;
@@ -70,6 +77,12 @@ export const LogosCli = styled.img`
     filter: grayscale(0%);
     opacity: 1;
     cursor: pointer;
+  }
+
+  @media (max-width: 840px) {
+    height: 100%;
+    width: 100%;
+    margin: -2rem 1rem 0 1rem;
   }
 `
 
@@ -85,23 +98,18 @@ export const Mark = styled.img(
 `,
 )
 
-export const Title = styled.h1(
-  ({ color, left, top }) => `
-    color: ${color};
-    margin-left: ${left}px;
-    margin-top: ${top}px;
-    text-transform: uppercase;
-`,
-)
+export const Title = styled.h1`
+  text-align: center;
+  text-transform: uppercase;
+`
 
 export const Text = styled.p`
   display: block;
-  margin-top: 1rem;
   width: 100%;
   font-size: 1rem;
 
   @media (max-width: 840px) {
     font-size: 1rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
   }
 `

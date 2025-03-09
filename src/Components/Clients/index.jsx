@@ -12,6 +12,7 @@ import { ScrollBtn } from '../ScrollBtn'
 import {
   ClietsArea,
   Container,
+  InfoContainer,
   LogosCli,
   LogosContainer,
   Mark,
@@ -41,22 +42,10 @@ const Clients = () => {
 
   return (
     <Section id="clients">
-      <div>
-        <Container>
+      <Container>
+        <InfoContainer>
           <div>
-            <Title
-              color={'var(--cor-light-primary)'}
-              left={responsiveWidth < 840 ? 80 : -30}
-              top={responsiveWidth < 840 && 30}
-            >
-              Veja quem já usa o
-            </Title>
-            <Title
-              color={'var(--cor-green-primary)'}
-              left={responsiveWidth < 840 ? 230 : 210}
-            >
-              TI Automoções Comerciais
-            </Title>
+            <Title>Veja quem já usa a TI Automoções Comerciais</Title>
           </div>
           <ClietsArea>
             <LogosContainer>
@@ -71,11 +60,10 @@ const Clients = () => {
               ))}
             </LogosContainer>
           </ClietsArea>
-        </Container>
-        <Container>
+        </InfoContainer>
+        <InfoContainer>
           <div>
-            <Title>Depoimentos</Title>
-            <Title>de nossos clientes</Title>
+            <Title>Depoimentos de nossos clientes</Title>
           </div>
           <TextArea>
             <Mark src={MarkL} size={80} alt="Simbulo de aspas" />
@@ -107,8 +95,8 @@ const Clients = () => {
               <p>- Kazebre</p>
             </Text>
           </TextArea>
-        </Container>
-      </div>
+        </InfoContainer>
+      </Container>
       <ScrollBtn text="Quero me tornar PDV Legal" />
     </Section>
   )
