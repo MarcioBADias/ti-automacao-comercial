@@ -49,7 +49,7 @@ const Clients = () => {
           </div>
           <ClietsArea>
             <LogosContainer>
-              {logosCli.map((logo, i) => (
+              {[...logosCli, ...logosCli].map((logo, i) => (
                 <LogosCli
                   key={i}
                   heightSize={responsiveWidth < 840 ? 200 : 100}

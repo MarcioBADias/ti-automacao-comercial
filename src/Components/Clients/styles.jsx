@@ -52,7 +52,6 @@ export const LogosContainer = styled.div`
       transform: translateX(150%);
     }
   }
-
   @media (max-width: 840px) {
     @keyframes logocarrocel {
       0% {
