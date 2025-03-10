@@ -5,6 +5,8 @@ import {
   SocialMediaIcons,
 } from './styles'
 
+import { FaFacebook, FaInstagram, FaWhatsapp  } from "react-icons/fa";
+
 const Footer = () => {
   return (
     <FooterContainer>
@@ -12,6 +14,8 @@ const Footer = () => {
         <FooterSection>
           <h3>TI Automacoes</h3>
           <p>Transformando o futuro dos negócios com soluções de automação.</p>
+          <p>Endereço: Av. Henrique Terra, 926 - sala 103 - Portinho</p>
+          <p>Cabo Frio - RJ, 28915-115</p>
         </FooterSection>
         <FooterSection>
           <h3>Links Rápidos</h3>
@@ -28,26 +32,27 @@ const Footer = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <i className="fab fa-facebook"></i>
+              <FaFacebook style={{ color: '#ffffff' }} />
             </a>
             <a
               href="https://www.twitter.com"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <i className="fab fa-twitter"></i>
+              <FaInstagram style={{ color: '#ffffff' }} />
             </a>
             <a
-              href="https://www.instagram.com"
+              href="https://wa.me/5522999866001"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <i className="fab fa-instagram"></i>
+              <FaWhatsapp style={{ color: '#ffffff' }} />
             </a>
           </SocialMediaIcons>
         </FooterSection>
       </FooterContent>
       <p>&copy; 2025 TI Automacoes. Todos os direitos reservados.</p>
+      <p style={{ marginTop: '-25px' }}>Desenvolvimento Mario Dias</p>
     </FooterContainer>
   )
 }

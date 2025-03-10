@@ -48,6 +48,7 @@ export const FooterSection = styled.div`
 export const SocialMediaIcons = styled.div`
   display: flex;
   gap: 20px;
+  justify-content: space-around;
 
   a {
     font-size: 1.5rem;
