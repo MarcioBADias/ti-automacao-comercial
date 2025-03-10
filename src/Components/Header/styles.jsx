@@ -30,23 +30,18 @@ export const Menu = styled.ul`
   height: auto;
 
   @media (max-width: 840px) {
-    background: linear-gradient(
-      90deg,
-      var(--color-primary) 0%,
-      var(--color-secondary) 58%
-    );
+    background: var(--color-primary);
     backdrop-filter: blur(3px);
     color: var(--color-light);
     display: ${({ showMenu }) => (showMenu ? 'flex' : 'none')};
     flex-direction: column;
-    height: 100vh;
     justify-content: start;
     opacity: 0.95;
     padding: 10px 0;
     position: absolute;
     right: 0;
     top: 80px;
-    width: 100%;
+    width: 60%;
     z-index: 99;
   }
 `

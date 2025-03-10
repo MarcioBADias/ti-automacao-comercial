@@ -19,7 +19,7 @@ const Home = () => {
         <Logo src="/Logo_TI_Comp.png" alt="Logo TI Automacao comercial" />
         <TextTitle>
             O sistema ideal para {' '}
-          <span style={{ color: 'var(--color-secondary)' }}>
+          <span style={{ color: 'var(--color-dark)' }}>
             solucionar erros e facilitar pedidos nos pedidos
           </span>{' '}
           do seu bar, casa noturna, restaurante ou beach club.
