@@ -38,17 +38,17 @@ const Solutions = () => {
         <div>
           <Image src="/PDV_Legal_Symbol.png" alt="PDV Legal" />
         </div>
-        <div style={{ width: '70%' }}>
-          <h1 style={{ color: '#ffffff', width: '90%', fontSize: 20 }}>
+        <div>
+          <h1 style={{ color: '#ffffff', fontSize: 20 }}>
             Descubra como o PDV Legal vai aumentar a eficiência e eliminar os
             erros no seu bar, balada ou restaurante.
           </h1>
           <h2
             style={{
               color: '#ffffff',
-              width: '80%',
               fontSize: 15,
               marginTop: 60,
+              textAlign: 'right',
             }}
           >
             O PDV Legal unifica pedidos, pagamentos e dados de consumo ,
@@ -92,12 +92,12 @@ const Solutions = () => {
           </Table>
         </TableContainer>
       </Section>
-      <div style={{ marginLeft: '9%' }}>
+      <div>
         <h1
           style={{
             color: '#ffffff',
-            width: '80%',
             fontSize: 20,
+            padding: 30,
             textAlign: 'center',
           }}
         >

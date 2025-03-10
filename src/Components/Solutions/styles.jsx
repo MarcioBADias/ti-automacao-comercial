@@ -21,13 +21,13 @@ export const Section = styled.section`
   }
 `
 export const Image = styled.img`
-  width: 400px;
-  margin: -13% 0 0 -13%;
+  width: 600px;
+  margin: -15.5% 0 0 -18%;
   transform: rotateY(180deg);
 
   @media (min-width: 840px) {
     width: 600px;
-    margin: -14% 0 0 -15%;
+    margin: -15.6% 0 0 -17%;
   }
 `
 export const TableContainer = styled.div`
