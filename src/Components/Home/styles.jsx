@@ -34,13 +34,14 @@ export const Card = styled.div`
   box-shadow: 5px 5px 0px black;
   font-family: Arial, sans-serif;
   margin-top: 1rem;
+  min-height: 130px;
   padding: 0.5rem;
   width: 40%;
 `
 
 export const Icon = styled.div`
   color: var(--color-primary);
-  font-size: 2rem;
+  font-size: 1.8rem;
 `
 
 export const TextCard = styled.p`
