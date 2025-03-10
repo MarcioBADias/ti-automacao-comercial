@@ -14,6 +14,11 @@ export const Container = styled(Element)`
   }
 `
 
+export const Logo = styled.img`
+  width: 200px;
+  cursor: pointer;
+`
+
 export const TextTitle = styled.div`
   font-size: 1.8rem;
   font-weight: bold;

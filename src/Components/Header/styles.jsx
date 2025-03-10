@@ -17,7 +17,7 @@ export const Nav = styled.nav`
 `
 
 export const Logo = styled.img`
-  width: 80px;
+  width: 60px;
   cursor: pointer;
 `
 

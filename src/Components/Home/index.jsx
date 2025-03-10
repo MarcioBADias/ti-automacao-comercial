@@ -5,6 +5,7 @@ import {
   Container,
   Icon,
   ImageHightlight,
+  Logo,
   TextCard,
   TextTitle,
 } from './styles'
@@ -22,6 +23,7 @@ const Home = () => {
         className="prev_about"
         style={{ textAlign: 'center', marginBottom: 20 }}
       >
+        <Logo src="/Logo_TI_Comp.png" alt="Logo TI Automacao comercial" />
         <TextTitle>
           O melhor sistema para{' '}
           <span style={{ color: 'var(--color-secondary)' }}>
