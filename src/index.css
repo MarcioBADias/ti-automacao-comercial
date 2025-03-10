@@ -9,9 +9,11 @@
 }
 
 :root {
-  --color-light: #efefff;
-  --color-primary: #086ad8;
-  --color-secondary: #6b7398;
+  --color-light: #eeeeee;
+  --color-primary: #0061fe;
+  --color-secondary: #C6C6C6;
+  --color-gray: #585858;
+  --color-dark: #323232;
 }
 
 * {
