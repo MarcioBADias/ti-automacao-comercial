@@ -19,6 +19,7 @@ export const InfoContainer = styled.div`
   align-items: center;
   display: flex;
   flex-direction: column;
+  padding: 1rem;
   width: 50vw;
   z-index: 5;
 
