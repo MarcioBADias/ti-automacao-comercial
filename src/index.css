@@ -26,8 +26,8 @@
 body {
   font-family: 'Arial', sans-serif;
   background:
-    linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)),
-    url('/Símbolo_Azul.png') no-repeat right fixed,
+    linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)),
+    url('/Símbolo_Azul_half.png') no-repeat right fixed,
     var(--color-light);
   color: var(--color-primary);
   line-height: 1.6;
