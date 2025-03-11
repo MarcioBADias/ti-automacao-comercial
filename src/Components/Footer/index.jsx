@@ -5,7 +5,7 @@ import {
   SocialMediaIcons,
 } from './styles'
 
-import { FaFacebook, FaInstagram, FaWhatsapp  } from "react-icons/fa";
+import { FaFacebook, FaInstagram, FaWhatsapp } from 'react-icons/fa'
 
 const Footer = () => {
   return (
@@ -19,10 +19,21 @@ const Footer = () => {
         </FooterSection>
         <FooterSection>
           <h3>Links Rápidos</h3>
-          <a href="#home">Início</a>
-          <a href="#features">Funcionalidades</a>
-          <a href="#pricing">Preços</a>
-          <a href="#contact">Contato</a>
+          <a style={{ marginRight: 10 }} href="#home">
+            Início
+          </a>
+          <a style={{ marginRight: 10 }} href="#features">
+            Soluções
+          </a>
+          <a style={{ marginRight: 10 }} href="#pricing">
+            Serviços
+          </a>
+          <a style={{ marginRight: 10 }} href="#contact">
+            Vantagens
+          </a>
+          <a style={{ marginRight: 10 }} href="#contact">
+            Clientes
+          </a>
         </FooterSection>
         <FooterSection>
           <h3>Redes Sociais</h3>
@@ -52,7 +63,7 @@ const Footer = () => {
         </FooterSection>
       </FooterContent>
       <p>&copy; 2025 TI Automacoes. Todos os direitos reservados.</p>
-      <p style={{ marginTop: '-25px' }}>Desenvolvimento Mario Dias</p>
+      <p style={{ marginTop: '-25px' }}>Desenvolvimento Marcio Dias</p>
     </FooterContainer>
   )
 }

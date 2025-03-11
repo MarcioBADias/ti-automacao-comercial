@@ -57,7 +57,7 @@ const Header = () => {
           duration={800}
           onClick={() => setShowMenu(!showMenu)}
         >
-          <ItemMenu>Qualidades</ItemMenu>
+          <ItemMenu>Vantagens</ItemMenu>
         </LinkItem>
         <LinkItem
           to="clients"
