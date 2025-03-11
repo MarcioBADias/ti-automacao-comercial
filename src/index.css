@@ -11,7 +11,7 @@
 :root {
   --color-light: #eeeeee;
   --color-primary: #0061fe;
-  --color-secondary: #C6C6C6;
+  --color-secondary: #c6c6c6;
   --color-gray: #585858;
   --color-dark: #323232;
 }
@@ -25,7 +25,9 @@
 
 body {
   font-family: 'Arial', sans-serif;
-  background: var(--color-light);
+  background:
+    url('/Símbolo_Azul.png') no-repeat right fixed,
+    var(--color-light);
   color: var(--color-primary);
   line-height: 1.6;
 }
