@@ -14,34 +14,33 @@ import {
 import { Icon } from './styles'
 
 const schema = Yup.object().shape({
-  fullName: Yup.string().required("Campo obrigatório"),
-  whatsapp: Yup.string().matches(/^\d{11}$/, "Deve ter 11 dígitos").required("Campo obrigatório"),
-  email: Yup.string().email("E-mail inválido").required("Campo obrigatório"),
-  instagram: Yup.string().required("Campo obrigatório"),
-  revenues: Yup.number().required("Campo obrigatório"),
-  devices: Yup.string().required("Campo obrigatório"),
+  fullName: Yup.string().required('Campo obrigatório'),
+  whatsapp: Yup.string()
+    .matches(/^\d{11}$/, 'Deve ter 11 dígitos')
+    .required('Campo obrigatório'),
+  email: Yup.string().email('E-mail inválido').required('Campo obrigatório'),
+  instagram: Yup.string().required('Campo obrigatório'),
 })
 
 const Contact = () => {
   const handleSubmit = (values, { resetForm }) => {
-    const formData = new URLSearchParams(values).toString();
-  
-    fetch("https://formsubmit.co/marcius.dev.estudos@gmail.com", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    const formData = new URLSearchParams(values).toString()
+
+    fetch('https://formsubmit.co/marcius.dev.estudos@gmail.com', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: formData,
     })
-    .then(response => {
-      if (response.ok) {
-        alert("Formulário enviado com sucesso!");
-        resetForm();
-      } else {
-        alert("Erro ao enviar o formulário.");
-      }
-    })
-    .catch(() => alert("Erro na conexão com o servidor."));
+      .then((response) => {
+        if (response.ok) {
+          alert('Formulário enviado com sucesso!')
+          resetForm()
+        } else {
+          alert('Erro ao enviar o formulário.')
+        }
+      })
+      .catch(() => alert('Erro na conexão com o servidor.'))
   }
-  
 
   return (
     <Section id="contacts">
@@ -52,8 +51,6 @@ const Contact = () => {
           whatsapp: '',
           email: '',
           instagram: '',
-          revenues: '',
-          devices: '',
         }}
         onSubmit={handleSubmit}
       >
@@ -66,24 +63,41 @@ const Contact = () => {
                 </Icon>
                 <Title>Preencha o formulário e aproveite agora</Title>
               </TextArea>
-              
-              <Field as={Input} name="fullName" type="text" placeholder="Nome Completo" />
-              {errors.fullName && touched.fullName && <ErrorMessage>{errors.fullName}</ErrorMessage>}
+
+              <Field
+                as={Input}
+                name="fullName"
+                type="text"
+                placeholder="Nome Completo"
+              />
+              {errors.fullName && touched.fullName && (
+                <ErrorMessage>{errors.fullName}</ErrorMessage>
+              )}
 
               <Field as={Input} name="email" type="text" placeholder="E-Mail" />
-              {errors.email && touched.email && <ErrorMessage>{errors.email}</ErrorMessage>}
+              {errors.email && touched.email && (
+                <ErrorMessage>{errors.email}</ErrorMessage>
+              )}
 
-              <Field as={Input} name="whatsapp" type="text" placeholder="Insira o número do Whatsapp" />
-              {errors.whatsapp && touched.whatsapp && <ErrorMessage>{errors.whatsapp}</ErrorMessage>}
+              <Field
+                as={Input}
+                name="whatsapp"
+                type="text"
+                placeholder="Insira o número do Whatsapp"
+              />
+              {errors.whatsapp && touched.whatsapp && (
+                <ErrorMessage>{errors.whatsapp}</ErrorMessage>
+              )}
 
-              <Field as={Input} name="instagram" type="text" placeholder="Instagram" />
-              {errors.instagram && touched.instagram && <ErrorMessage>{errors.instagram}</ErrorMessage>}
-
-              <Field as={Input} name="revenues" type="text" placeholder="Faturamento" />
-              {errors.revenues && touched.revenues && <ErrorMessage>{errors.revenues}</ErrorMessage>}
-
-              <Field as={Input} name="devices" type="text" placeholder="Trabalha com cardápio ou balança?" />
-              {errors.devices && touched.devices && <ErrorMessage>{errors.devices}</ErrorMessage>}
+              <Field
+                as={Input}
+                name="instagram"
+                type="text"
+                placeholder="Instagram"
+              />
+              {errors.instagram && touched.instagram && (
+                <ErrorMessage>{errors.instagram}</ErrorMessage>
+              )}
 
               <Button type="submit">Quero Falar com Especialista</Button>
             </Container>

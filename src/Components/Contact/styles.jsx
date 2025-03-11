@@ -30,12 +30,11 @@ export const Container = styled.div`
 export const TextArea = styled.div`
   align-items: center;
   display: flex;
-  width: 115%;
+  width: 100%;
 `
 export const Icon = styled.div`
   color: var(--color-primary);
   font-size: 2rem;
-  margin-left: 3rem;
 `
 
 export const Title = styled.h1`
@@ -46,7 +45,7 @@ export const Title = styled.h1`
 
 export const Input = styled(Field)`
   background: #ffffff;
-  border: 2px var(--color-primary) solid;
+  border: 1px var(--color-primary) solid;
   border-radius: 5px;
   color: var(--color-primary);
   font-size: 1rem;
@@ -56,37 +55,6 @@ export const Input = styled(Field)`
 
   ::placeholder {
     color: var(--color-primary);
-  }
-`
-
-export const Select = styled.select`
-  background: var(--cor-dark-secontary);
-  border: 1px var(--cor-green-primary) solid;
-  color: var(--cor-light-primary);
-  border-radius: 5px;
-  padding: 0.4rem 6.5rem;
-  margin-bottom: 1rem;
-
-  ::placeholder {
-    color: var(--cor-light-primary);
-  }
-
-  @media (max-width: 840px) {
-    padding: 0.4rem 4rem;
-  }
-`
-
-export const Option = styled.option`
-  background: var(--cor-dark-secontary);
-  border: 1px var(--cor-green-primary) solid;
-  color: var(--cor-dark-primary);
-  border-radius: 5px;
-  padding: 0.5rem;
-  margin-bottom: 1rem;
-  width: 80%;
-
-  ::placeholder {
-    color: var(--cor-light-primary);
   }
 `
 
