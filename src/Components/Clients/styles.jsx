@@ -33,6 +33,7 @@ export const InfoContainer = styled.div`
 export const ClietsArea = styled.div`
   position: relative;
   overflow: hidden;
+  width: 100%;
 `
 
 export const LogosContainer = styled.div`
