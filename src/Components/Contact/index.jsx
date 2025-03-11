@@ -26,7 +26,7 @@ const Contact = () => {
   const handleSubmit = (values, { resetForm }) => {
     const formData = new URLSearchParams(values).toString()
 
-    fetch('https://formsubmit.co/marcius.dev.estudos@gmail.com', {
+    fetch('https://formsubmit.co/ti_consultoria@hotmail.com', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: formData,
