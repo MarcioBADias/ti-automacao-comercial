@@ -24,26 +24,24 @@ const schema = Yup.object().shape({
 
 const Contact = () => {
   const handleSubmit = (values, { resetForm }) => {
-    const formData = new URLSearchParams({
-      ...values,
-      _next: 'https://tiautomacaocomercial.netlify.app',
-      _captcha: 'false',
-    }).toString()
+    console.log('Valores do Formulário:', values)
   
-    fetch('https://formsubmit.co/marcius.dev.estudos@gmail.com', {
+    fetch('https://formsubmit.co/ajax/marcius.dev.estudos@gmail.com', {
       method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: formData,
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        ...values,
+        _subject: 'Novo contato pelo site!',
+        _captcha: 'false',
+      }),
     })
-      .then((response) => {
-        if (response.ok) {
-          alert('Formulário enviado com sucesso!')
-          resetForm()
-        } else {
-          alert('Erro ao enviar o formulário.')
-        }
+      .then((res) => res.json())
+      .then((data) => {
+        console.log('Resposta do Servidor:', data)
+        alert('Formulário enviado com sucesso!')
+        resetForm()
       })
-      .catch(() => alert('Erro na conexão com o servidor.'))
+      .catch((err) => console.error('Erro ao enviar:', err))
   }
   
 
