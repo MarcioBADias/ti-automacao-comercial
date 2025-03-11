@@ -1,10 +1,5 @@
 import React from 'react'
-import {
-  Container,
-  ImageHightlight,
-  Logo,
-  TextTitle,
-} from './styles'
+import { Container, ImageHightlight, Logo, TextTitle } from './styles'
 import { Contact } from '../Contact'
 
 const Home = () => {
@@ -18,7 +13,7 @@ const Home = () => {
       >
         <Logo src="/Logo_TI_Comp.png" alt="Logo TI Automacao comercial" />
         <TextTitle>
-            O sistema ideal para {' '}
+          O sistema ideal para{' '}
           <span style={{ color: 'var(--color-dark)' }}>
             solucionar erros e facilitar pedidos nos pedidos
           </span>{' '}
