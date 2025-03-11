@@ -3,7 +3,6 @@ import styled from 'styled-components'
 
 export const FeaturesContainer = styled.section`
   padding: 60px 100px;
-  background-color: #ffffff;
   text-align: center;
 
   h2 {

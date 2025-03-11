@@ -52,7 +52,9 @@ const Services = () => {
           ))}
         </CardContainer>
       </div>
-      <ScrollBtn text="Quero PDV Legal para meu Negócio" />
+      <div style={{ marginBottom: 40 }}>
+        <ScrollBtn text="Quero PDV Legal para meu Negócio" />
+      </div>
     </Container>
   )
 }

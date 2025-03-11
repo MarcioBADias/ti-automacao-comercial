@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { CgMenuRightAlt, CgCloseR } from 'react-icons/cg'
 import {
   ButtonMenu,
@@ -11,9 +11,24 @@ import {
 } from './styles'
 
 const Header = () => {
+  const [ showHeader, setShowHeader ] = useState(false)
   const [showMenu, setShowMenu] = useState(false)
 
-  return (
+  useEffect(() => {
+    const handleScroll = () => {
+      const headerHeight = 80
+      const CurrentHeight = window.scrollY
+
+      CurrentHeight > headerHeight ? setShowHeader(true): setShowHeader(false)
+    }
+
+    window.addEventListener('scroll', handleScroll);
+    
+    return () => window.removeEventListener('scroll', handleScroll);
+
+  }, [])
+
+  return showHeader &&
     <Nav>
       <LinkItem to="home" spy={true} smooth={true} offset={-80} duration={800}>
         <Logo src="/LogoTICavalinho.png" alt="Logo TI Automaccao Comecial" />
@@ -88,7 +103,6 @@ const Header = () => {
         </IconMenu>
       </ButtonMenu>
     </Nav>
-  )
 }
 
 export { Header }

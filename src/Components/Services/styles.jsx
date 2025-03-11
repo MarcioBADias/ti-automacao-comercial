@@ -3,9 +3,11 @@ import styled from 'styled-components'
 
 export const Container = styled(Element)`
   align-items: center;
+  background: var(--color-light);
   display: flex;
   flex-direction: column;
-  margin: 2rem 1rem;
+  margin: 2rem 0;
+  padding: 0 2rem;
 
   @media (min-width: 840px) {
   }
