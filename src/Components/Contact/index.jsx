@@ -24,8 +24,12 @@ const schema = Yup.object().shape({
 
 const Contact = () => {
   const handleSubmit = (values, { resetForm }) => {
-    const formData = new URLSearchParams(values).toString()
-
+    const formData = new URLSearchParams({
+      ...values,
+      _next: 'https://tiautomacaocomercial.netlify.app',
+      _captcha: 'false',
+    }).toString()
+  
     fetch('https://formsubmit.co/marcius.dev.estudos@gmail.com', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
@@ -41,6 +45,7 @@ const Contact = () => {
       })
       .catch(() => alert('Erro na conexão com o servidor.'))
   }
+  
 
   return (
     <Section id="contacts">
