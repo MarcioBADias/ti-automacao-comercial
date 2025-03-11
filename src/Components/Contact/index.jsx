@@ -24,26 +24,23 @@ const schema = Yup.object().shape({
 
 const Contact = () => {
   const handleSubmit = (values, { resetForm }) => {
-    console.log('Valores do Formulário:', values)
-  
-    fetch('https://formsubmit.co/ajax/marcius.dev.estudos@gmail.com', {
+    const formData = new URLSearchParams(values).toString()
+
+    fetch('https://formsubmit.co/marcius.dev.estudos@gmail.com', {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        ...values,
-        _subject: 'Novo contato pelo site!',
-        _captcha: 'false',
-      }),
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: formData,
     })
-      .then((res) => res.json())
-      .then((data) => {
-        console.log('Resposta do Servidor:', data)
-        alert('Formulário enviado com sucesso!')
-        resetForm()
+      .then((response) => {
+        if (response.ok) {
+          alert('Formulário enviado com sucesso!')
+          resetForm()
+        } else {
+          alert('Erro ao enviar o formulário.')
+        }
       })
-      .catch((err) => console.error('Erro ao enviar:', err))
+      .catch(() => alert('Erro na conexão com o servidor.'))
   }
-  
 
   return (
     <Section id="contacts">
