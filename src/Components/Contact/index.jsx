@@ -61,7 +61,7 @@ const Contact = () => {
                 <Icon>
                   <RiArrowDownDoubleLine />
                 </Icon>
-                <Title>Preencha o formulário e aproveite agora</Title>
+                <Title>Preencha o formulário e aproveite!</Title>
               </TextArea>
 
               <Field

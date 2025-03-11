@@ -15,7 +15,7 @@ const Home = () => {
         <TextTitle>
           O sistema ideal para{' '}
           <span style={{ color: 'var(--color-dark)' }}>
-            solucionar erros e facilitar pedidos nos pedidos
+            solucionar erros e facilitar a gestão nos pedidos
           </span>{' '}
           do seu bar, casa noturna, restaurante ou beach club.
         </TextTitle>

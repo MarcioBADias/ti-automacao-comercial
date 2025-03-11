@@ -59,12 +59,13 @@ export const TextCard = styled.p`
 export const ImageHightlight = styled.img`
   align-items: center;
   display: flex;
-  width: 400px;
-  max-width: 100vw;
+  height: 550px;
+  width: 500px;
 
   @media (min-width: 840px) {
     margin: 8% 0 0 30%;
-    width: 550px;
+    min-height: 600px;
+    min-width: 700px;
   }
 `
 
