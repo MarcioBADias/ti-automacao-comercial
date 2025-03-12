@@ -26,7 +26,7 @@ const schema = Yup.object().shape({
 const Contact = () => {
   const formRef = useRef()
 
-  const handleSubmit = (values, { resetForm }) => {
+  const sendMail = (values) => {
     var templateParans = {
       fullname: values.fullName,
       whatsapp: values.whatsapp,
@@ -50,6 +50,21 @@ const Contact = () => {
         }
       )
       console.log(templateParans)
+  }
+
+  const handleSubmit = (values, { resetForm }) => {
+    sendMail(values)
+    const message = `Olá, me chamo ${values.fullName} ! Gostaria de mais informações. Seguem meus dados:
+        
+    *Nome:* ${values.fullName}
+    *WhatsApp:* ${values.whatsapp}
+    *E-mail:* ${values.email}
+    *Instagram:* ${values.instagram}`;
+      
+    const phoneNumber = "5522999866001";
+    const whatsappURL = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(message)}`;
+    window.open(whatsappURL, "_blank");
+    resetForm();
   }
 
   return (
