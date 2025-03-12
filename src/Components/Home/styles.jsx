@@ -78,16 +78,14 @@ export const ImageHightlight = styled.img`
 
 export const BackgroundImage = styled.img`
   position: absolute;
-  top: -80px;
-  right: -430px;
-  width: 800px;
   height: auto;
-  z-index: 1;
+  margin: -300px -800px 0 0;
   opacity: 0.8;
+  width: 800px;
+  z-index: 1;
 
   @media (max-width: 840px) {
-    top: -50px; 
-    right:-180px;
+
   }
 `;
 

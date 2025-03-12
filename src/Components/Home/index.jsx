@@ -21,12 +21,10 @@ const Home = () => {
         </TextTitle>
         <Contact />
       </div>
-      <div>
         <ImageContainer>
           <BackgroundImage src="PDV_Legal_Symbol.png" alt="Logo PDV Legal" />
           <ImageHightlight src="/pdvlegal-mobile.png" alt="Maquininha" className="logo_art" />
         </ImageContainer>
-      </div>
     </Container>
   )
 }

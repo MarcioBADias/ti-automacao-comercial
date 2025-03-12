@@ -61,7 +61,7 @@ const Contact = () => {
     *E-mail:* ${values.email}
     *Instagram:* ${values.instagram}`;
       
-    const phoneNumber = "5522999866001";
+    const phoneNumber = "5521996526895";
     const whatsappURL = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(message)}`;
     window.open(whatsappURL, "_blank");
     resetForm();
