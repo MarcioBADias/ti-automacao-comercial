@@ -27,16 +27,17 @@ const Contact = () => {
   const formRef = useRef()
 
   const handleSubmit = (values, { resetForm }) => {
+    var templateParans = {
+      fullname: values.fullName,
+      whatsapp: values.whatsapp,
+      email: values.email,
+      instagram: values.instagram,
+    }
     emailjs
       .send(
         import.meta.env.VITE_EMAILJS_SERVICE_ID,
         import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
-        {
-          fullname: values.fullName,
-          whatsapp: values.whatsapp,
-          email: values.email,
-          instagram: values.instagram,
-        },
+        templateParans,
         import.meta.env.VITE_EMAILJS_PUBLIC_KEY
       )
       .then(
@@ -48,6 +49,7 @@ const Contact = () => {
           alert('Erro ao enviar o formulário: ' + error.text)
         }
       )
+      console.log(templateParans)
   }
 
   return (
