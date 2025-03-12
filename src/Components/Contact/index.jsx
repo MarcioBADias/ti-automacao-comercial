@@ -1,7 +1,7 @@
-import React from 'react'
-import { RiArrowDownDoubleLine } from 'react-icons/ri'
+import React, { useRef } from 'react'
 import { Formik, Form, Field } from 'formik'
 import * as Yup from 'yup'
+import emailjs from '@emailjs/browser'
 import {
   Button,
   Container,
@@ -11,6 +11,7 @@ import {
   Title,
   TextArea,
 } from './styles'
+import { RiArrowDownDoubleLine } from 'react-icons/ri'
 import { Icon } from './styles'
 
 const schema = Yup.object().shape({
@@ -23,23 +24,30 @@ const schema = Yup.object().shape({
 })
 
 const Contact = () => {
-  const handleSubmit = (values, { resetForm }) => {
-    const formData = new URLSearchParams(values).toString()
+  const formRef = useRef()
 
-    fetch('https://formsubmit.co/ti_consultoria@hotmail.com', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: formData,
-    })
-      .then((response) => {
-        if (response.ok) {
+  const handleSubmit = (values, { resetForm }) => {
+    emailjs
+      .send(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        {
+          fullname: values.fullName,
+          whatsapp: values.whatsapp,
+          email: values.email,
+          instagram: values.instagram,
+        },
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+      )
+      .then(
+        () => {
           alert('Formulário enviado com sucesso!')
           resetForm()
-        } else {
-          alert('Erro ao enviar o formulário.')
+        },
+        (error) => {
+          alert('Erro ao enviar o formulário: ' + error.text)
         }
-      })
-      .catch(() => alert('Erro na conexão com o servidor.'))
+      )
   }
 
   return (
@@ -55,7 +63,7 @@ const Contact = () => {
         onSubmit={handleSubmit}
       >
         {({ errors, touched }) => (
-          <Form>
+          <Form ref={formRef}>
             <Container>
               <TextArea>
                 <Icon>
@@ -64,12 +72,7 @@ const Contact = () => {
                 <Title>Preencha o formulário e aproveite!</Title>
               </TextArea>
 
-              <Field
-                as={Input}
-                name="fullName"
-                type="text"
-                placeholder="Nome Completo"
-              />
+              <Field as={Input} name="fullName" type="text" placeholder="Nome Completo" />
               {errors.fullName && touched.fullName && (
                 <ErrorMessage>{errors.fullName}</ErrorMessage>
               )}
@@ -79,22 +82,12 @@ const Contact = () => {
                 <ErrorMessage>{errors.email}</ErrorMessage>
               )}
 
-              <Field
-                as={Input}
-                name="whatsapp"
-                type="text"
-                placeholder="Insira o número do Whatsapp"
-              />
+              <Field as={Input} name="whatsapp" type="text" placeholder="Insira o número do Whatsapp" />
               {errors.whatsapp && touched.whatsapp && (
                 <ErrorMessage>{errors.whatsapp}</ErrorMessage>
               )}
 
-              <Field
-                as={Input}
-                name="instagram"
-                type="text"
-                placeholder="Instagram"
-              />
+              <Field as={Input} name="instagram" type="text" placeholder="Instagram" />
               {errors.instagram && touched.instagram && (
                 <ErrorMessage>{errors.instagram}</ErrorMessage>
               )}
