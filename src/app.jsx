@@ -5,6 +5,7 @@ import { Clients } from './Components/Clients'
 import { Footer } from './Components/Footer'
 import { Solutions } from './Components/Solutions'
 import { Services } from './Components/Services'
+import { WhatsAppButton } from './Components/WatsAppBtn'
 
 const App = () => {
   return (
@@ -15,6 +16,7 @@ const App = () => {
       <Features />
       <Clients />
       <Footer />
+      <WhatsAppButton phoneNumber='5522999866001' message='Olá gostaria de saber mais informações.' />
     </main>
   )
 }
