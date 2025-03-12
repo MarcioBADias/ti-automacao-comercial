@@ -56,9 +56,16 @@ export const TextCard = styled.p`
   padding: 0.5rem;
 `
 
-export const ImageHightlight = styled.img`
-  align-items: center;
+export const ImageContainer = styled.div`
+  position: relative; 
   display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+
+export const ImageHightlight = styled.img`
+  position: relative;
+  z-index: 2;
   height: 400px;
   width: 400px;
 
@@ -67,7 +74,22 @@ export const ImageHightlight = styled.img`
     min-height: 600px;
     min-width: 700px;
   }
-`
+`;
+
+export const BackgroundImage = styled.img`
+  position: absolute;
+  top: -80px;
+  right: -430px;
+  width: 800px;
+  height: auto;
+  z-index: 1;
+  opacity: 0.8;
+
+  @media (max-width: 840px) {
+    top: -50px; 
+    right:-180px;
+  }
+`;
 
 /*export const AnimatedLogo = styled.img`
   margin: 1rem 0 -5rem 0rem;

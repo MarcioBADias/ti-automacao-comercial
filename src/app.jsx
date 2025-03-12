@@ -16,7 +16,10 @@ const App = () => {
       <Features />
       <Clients />
       <Footer />
-      <WhatsAppButton phoneNumber='5522999866001' message='Olá gostaria de saber mais informações.' />
+      <WhatsAppButton 
+        phoneNumber='5522999866001' 
+        message='Olá gostaria de saber mais informações.' 
+      />
     </main>
   )
 }
