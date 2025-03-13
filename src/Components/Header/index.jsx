@@ -45,16 +45,6 @@ const Header = () => {
           <ItemMenu>Início</ItemMenu>
         </LinkItem>
         <LinkItem
-          to="solutions"
-          spy={true}
-          smooth={true}
-          offset={-80}
-          duration={800}
-          onClick={() => setShowMenu(!showMenu)}
-        >
-          <ItemMenu>Soluções</ItemMenu>
-        </LinkItem>
-        <LinkItem
           to="services"
           spy={true}
           smooth={true}

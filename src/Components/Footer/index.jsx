@@ -22,16 +22,13 @@ const Footer = () => {
           <a style={{ marginRight: 10 }} href="#home">
             Início
           </a>
-          <a style={{ marginRight: 10 }} href="#features">
-            Soluções
-          </a>
-          <a style={{ marginRight: 10 }} href="#pricing">
+          <a style={{ marginRight: 10 }} href="#services">
             Serviços
           </a>
-          <a style={{ marginRight: 10 }} href="#contact">
+          <a style={{ marginRight: 10 }} href="#features">
             Vantagens
           </a>
-          <a style={{ marginRight: 10 }} href="#contact">
+          <a style={{ marginRight: 10 }} href="#clients">
             Clientes
           </a>
         </FooterSection>
@@ -63,7 +60,7 @@ const Footer = () => {
         </FooterSection>
       </FooterContent>
       <p>&copy; 2025 TI Automacoes. Todos os direitos reservados.</p>
-      <p style={{ marginTop: '-25px' }}>Desenvolvimento Marcio Dias</p>
+      <p style={{ marginTop: '-25px', fontSize: 15 }}>Desenvolmineto Web Marcio Dias</p>
     </FooterContainer>
   )
 }

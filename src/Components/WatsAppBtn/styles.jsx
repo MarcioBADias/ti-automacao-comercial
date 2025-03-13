@@ -15,6 +15,7 @@ export const ButtonContainer = styled.a`
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
   text-decoration: none;
+  z-index: 99;
 
   &:hover {
     transform: scale(1.1);
