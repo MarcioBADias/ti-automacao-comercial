@@ -1,5 +1,11 @@
 import React from 'react'
-import { BackgroundImage, Container, ImageContainer, ImageHightlight, Logo, TextTitle } from './styles'
+import {
+  Container,
+  ImageContainer,
+  ImageHightlight,
+  Logo,
+  TextTitle,
+} from './styles'
 import { Contact } from '../Contact'
 
 const Home = () => {
@@ -21,10 +27,13 @@ const Home = () => {
         </TextTitle>
         <Contact />
       </div>
-        <ImageContainer>
-          <BackgroundImage src="PDV_Legal_Symbol.png" alt="Logo PDV Legal" />
-          <ImageHightlight src="/pdvlegal-mobile.png" alt="Maquininha" className="logo_art" />
-        </ImageContainer>
+      <ImageContainer>
+        <ImageHightlight
+          src="/PDV_Legal_Destaque.png"
+          alt="Maquininha"
+          className="logo_art"
+        />
+      </ImageContainer>
     </Container>
   )
 }
