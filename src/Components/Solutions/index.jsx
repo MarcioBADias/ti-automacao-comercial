@@ -1,41 +1,19 @@
 import React from 'react'
-import { TbRosetteDiscountCheckFilled } from 'react-icons/tb'
 import { FaWifi, FaUserTie, FaIdCard, FaClipboardList, FaChartPie, FaDollarSign } from "react-icons/fa"
-import { MdCancel } from 'react-icons/md'
 import {
   Card,
   CardContainer,
-  Column,
   Container,
   Icon,
   Image,
   InfoContainer,
-  List,
-  ListItem,
   Section,
-  Table,
-  TableContainer,
+  Text,
   Title,
-  TitleColumn,
 } from './styles'
 import { ScrollBtn } from '../ScrollBtn'
 
 const Solutions = () => {
-  const problems = [
-    'Filas longas no caixa',
-    'Clientes desistindo por falta de pagamento digital',
-    'Dificuldade no controle de estoque em tempo real',
-    'Erros no cálculo de troco e fechamento de caixa',
-    'Falta de relatórios detalhados sobre vendas',
-  ]
-
-  const solutions = [
-    'Agilize com autoatendimento e QR Code para pagamento',
-    'Aceite pagamento por aproximação e PIX integrado',
-    'Sincronização automática do estoque com cada venda',
-    'Fechamento de caixa automático e sem erros',
-    'Relatórios completos de vendas e lucratividade',
-  ]
   
   const features = [
     { icon: <FaWifi />, text: "Funciona com ou sem internet", highlight: true },
@@ -49,16 +27,17 @@ const Solutions = () => {
   return (
     <>
     <Section name="solutions" id="solutions">
+      <Title>Soluções</Title>
       <Container>
       <Container>
         <Image src="/card_soluctions.png" alt="PDV Legal" />
       </Container>
       <InfoContainer>
-          <h1 style={{ color: '#ffffff', fontSize: 20 }}>
+          <Text>
             Descubra como o PDV Legal vai aumentar a eficiência e eliminar os
             erros no seu bar, balada ou restaurante.
-          </h1>
-          <h2
+          </Text>
+          {/* <h2
             style={{
               color: '#ffffff',
               fontSize: 15,
@@ -66,7 +45,7 @@ const Solutions = () => {
           >
             O PDV Legal unifica pedidos, pagamentos e dados de consumo ,
             tornando sua operação mais ágil e precisa. Confira:
-          </h2>
+          </h2> */}
     <CardContainer>
       {features.map((feature, i) => (
         <Card key={i} highlight={feature.highlight}>
@@ -112,17 +91,10 @@ const Solutions = () => {
       </InfoContainer>
       </Container>
       <div>
-        <h1
-          style={{
-            color: '#ffffff',
-            fontSize: 20,
-            padding: 30,
-            textAlign: 'center',
-          }}
-        >
+        <Text>
           Se você enfrenta atrasos, erros de comandas e confusão no fechamento,
           é hora de mudar.
-        </h1>
+        </Text>
       </div>
       <ScrollBtn
         bg={'var(--color-light)'}

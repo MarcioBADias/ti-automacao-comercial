@@ -6,14 +6,21 @@ export const Section = styled(Element)`
   background: var(--color-primary);
   display: flex;
   flex-direction: column;
-  margin-top: 10%;
+  padding: 1rem 2rem;
 
   @media (min-width: 840px) {
   }
 `
+export const Title = styled.h1`
+  align-items: center;
+  color: var(--color-light);
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  text-align: center;
+`
+
 export const Container = styled.section`
   color: var(--color-primary);
-  padding: 50px;
 
   @media (min-width: 840px) {
     padding: 1rem;
@@ -35,60 +42,13 @@ export const InfoContainer = styled.div`
   display: flex;
   flex-direction: column;
 `
-export const TableContainer = styled.div`
-  display: flex;
-  justify-content: center;
+
+export const Text = styled.h1`
   align-items: center;
-  border-radius: 10px;
-
-  @media (min-width: 840px) {
-    padding: 1rem;
-  }
-`
-
-export const Table = styled.div`
-  display: flex;
-  border-radius: 10px;
-  overflow: hidden;
-`
-
-export const Column = styled.div`
-  background: var(--color-light);
-  flex: 1;
-`
-export const TitleColumn = styled.div`
-  align-items: center;
-  display: flex;
-  justify-content: center;
-  font-size: 0.8rem;
-  min-height: 20%;
-  padding: 1rem;
-  &.problems {
-    background: #c90000;
-  }
-  &.solutions {
-    background: #009c2a;
-  }
-`
-
-export const Title = styled.h2`
   color: var(--color-light);
-  text-align: center;
-  margin-bottom: 20px;
-`
-
-export const List = styled.ul`
-  list-style: none;
-  padding: 0;
-`
-
-export const ListItem = styled.li`
-  color: #000000;
-  display: flex;
-  align-items: center;
-  margin-bottom: 15px;
   font-size: 1rem;
-  padding: 1rem;
+  margin: 2rem 0;
+  text-align: center;
 `
 export const CardContainer = styled.div`
   display: grid;
