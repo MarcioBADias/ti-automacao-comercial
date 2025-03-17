@@ -28,6 +28,13 @@ export const Image = styled.img`
   @media (min-width: 840px) {
   }
 `
+
+export const InfoContainer = styled.div`
+  align-items: center;
+  background: var(--color-primary);
+  display: flex;
+  flex-direction: column;
+`
 export const TableContainer = styled.div`
   display: flex;
   justify-content: center;

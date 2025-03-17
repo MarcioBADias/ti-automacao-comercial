@@ -9,6 +9,7 @@ import {
   Container,
   Icon,
   Image,
+  InfoContainer,
   List,
   ListItem,
   Section,
@@ -52,8 +53,8 @@ const Solutions = () => {
       <Container>
         <Image src="/card_soluctions.png" alt="PDV Legal" />
       </Container>
-      <Container>
-          {/* <h1 style={{ color: '#ffffff', fontSize: 20 }}>
+      <InfoContainer>
+          <h1 style={{ color: '#ffffff', fontSize: 20 }}>
             Descubra como o PDV Legal vai aumentar a eficiência e eliminar os
             erros no seu bar, balada ou restaurante.
           </h1>
@@ -65,7 +66,7 @@ const Solutions = () => {
           >
             O PDV Legal unifica pedidos, pagamentos e dados de consumo ,
             tornando sua operação mais ágil e precisa. Confira:
-          </h2> */}
+          </h2>
     <CardContainer>
       {features.map((feature, i) => (
         <Card key={i} highlight={feature.highlight}>
@@ -108,7 +109,7 @@ const Solutions = () => {
             </Column>
           </Table>
         </TableContainer> */}
-      </Container>
+      </InfoContainer>
       </Container>
       <div>
         <h1
