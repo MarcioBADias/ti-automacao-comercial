@@ -64,7 +64,7 @@ export const ImageContainer = styled.div`
 
 export const ImageHightlight = styled.img`
   height: 400px;
-  width: 400px;
+  width: 600px;
 
   @media (min-width: 840px) {
     margin: 8% 0 0 30%;
@@ -72,24 +72,3 @@ export const ImageHightlight = styled.img`
     min-width: 700px;
   }
 `
-
-/*export const AnimatedLogo = styled.img`
-  margin: 1rem 0 -5rem 0rem;
-  width: 250px;
-  animation: spinHorizontal 5s linear infinite;
-
-  @keyframes spinHorizontal {
-    0% {
-      transform: rotateY(0deg);
-    }
-    100% {
-      transform: rotateY(360deg);
-    }
-  }
-
-  @media (min-width: 840px) {
-    align-items: center;
-    margin: 1rem 0 -5rem 15rem;
-    width: 35%;
-  }
-`*/

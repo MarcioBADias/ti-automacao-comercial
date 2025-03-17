@@ -12,6 +12,7 @@ const App = () => {
     <main>
       <Header />
       <Home />
+      <Solutions />
       <Services />
       <Features />
       <Clients />

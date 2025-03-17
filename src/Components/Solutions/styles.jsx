@@ -1,7 +1,7 @@
 import { Element } from 'react-scroll'
 import styled from 'styled-components'
 
-export const Container = styled(Element)`
+export const Section = styled(Element)`
   align-items: center;
   background: var(--color-primary);
   display: flex;
@@ -9,25 +9,23 @@ export const Container = styled(Element)`
   margin-top: 10%;
 
   @media (min-width: 840px) {
-    padding: 1rem;
   }
 `
-export const Section = styled.section`
+export const Container = styled.section`
   color: var(--color-primary);
   padding: 50px;
 
   @media (min-width: 840px) {
+    padding: 1rem;
     display: flex;
+    flex-direction: row;
+    justify-content: space-between;
   }
 `
 export const Image = styled.img`
   width: 600px;
-  margin: -15.5% 0 0 -18%;
-  transform: rotateY(180deg);
 
   @media (min-width: 840px) {
-    width: 600px;
-    margin: -15.6% 0 0 -17%;
   }
 `
 export const TableContainer = styled.div`
@@ -85,3 +83,29 @@ export const ListItem = styled.li`
   font-size: 1rem;
   padding: 1rem;
 `
+export const CardContainer = styled.div`
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  max-width: 600px;
+  margin: auto;
+`;
+
+export const Card = styled.div`
+  align-items: center;
+  background: #f5f5f5;
+  border: ${(props) => (props.highlight ? "3px solid var(--color-secondary)" : "none")};
+  border-radius: 8px;
+  box-shadow: ${(props) => (props.highlight ? "0 0 30px var(--color-secondary)" : "none")};
+  display: flex;
+  flex-direction: column;
+  height: 150px;
+  padding: 20px;
+  text-align: center;
+`;
+
+export const Icon = styled.div`
+  font-size: 24px;
+  color: #0044cc;
+  margin-bottom: 10px;
+`;

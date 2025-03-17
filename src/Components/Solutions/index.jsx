@@ -1,9 +1,13 @@
 import React from 'react'
 import { TbRosetteDiscountCheckFilled } from 'react-icons/tb'
+import { FaWifi, FaUserTie, FaIdCard, FaClipboardList, FaChartPie, FaDollarSign } from "react-icons/fa"
 import { MdCancel } from 'react-icons/md'
 import {
+  Card,
+  CardContainer,
   Column,
   Container,
+  Icon,
   Image,
   List,
   ListItem,
@@ -17,29 +21,39 @@ import { ScrollBtn } from '../ScrollBtn'
 
 const Solutions = () => {
   const problems = [
-    'Garçons levando muito tempo para atender',
-    'Pedidos enviados com erros para a cozinha',
-    'Confusão na hora de fechar comanda em grupo',
-    'Clientes que saem sem pagar',
-    'Quebras de caixa no fim do dia',
+    'Filas longas no caixa',
+    'Clientes desistindo por falta de pagamento digital',
+    'Dificuldade no controle de estoque em tempo real',
+    'Erros no cálculo de troco e fechamento de caixa',
+    'Falta de relatórios detalhados sobre vendas',
   ]
 
   const solutions = [
-    'Mais rapidez com PDV móvel e Totens',
-    'Pedidos vinculados à mesa e impressão remota na cozinha',
-    'Comanda individual por cliente',
-    'Possibilidade de cobrança pelo Whatsapp',
-    'Fechamento em 15min com adquirência integrada',
+    'Agilize com autoatendimento e QR Code para pagamento',
+    'Aceite pagamento por aproximação e PIX integrado',
+    'Sincronização automática do estoque com cada venda',
+    'Fechamento de caixa automático e sem erros',
+    'Relatórios completos de vendas e lucratividade',
   ]
+  
+  const features = [
+    { icon: <FaWifi />, text: "Funciona com ou sem internet", highlight: true },
+    { icon: <FaUserTie />, text: "Implantação e treinamento presenciais" },
+    { icon: <FaIdCard />, text: "Comanda individual por CPF" },
+    { icon: <FaClipboardList />, text: "Gestão de pagamento, estoque e pedidos" },
+    { icon: <FaChartPie />, text: "Dados de consumo por pessoa" },
+    { icon: <FaDollarSign />, text: "Totens de auto-atendimento" }
+  ];
 
   return (
-    <Container name="solutions" id="solutions">
-      <Section>
-        <div>
-          <Image src="/PDV_Legal_Symbol.png" alt="PDV Legal" />
-        </div>
-        <div>
-          <h1 style={{ color: '#ffffff', fontSize: 20 }}>
+    <>
+    <Section name="solutions" id="solutions">
+      <Container>
+      <Container>
+        <Image src="/card_soluctions.png" alt="PDV Legal" />
+      </Container>
+      <Container>
+          {/* <h1 style={{ color: '#ffffff', fontSize: 20 }}>
             Descubra como o PDV Legal vai aumentar a eficiência e eliminar os
             erros no seu bar, balada ou restaurante.
           </h1>
@@ -47,17 +61,20 @@ const Solutions = () => {
             style={{
               color: '#ffffff',
               fontSize: 15,
-              marginTop: 60,
-              textAlign: 'right',
             }}
           >
             O PDV Legal unifica pedidos, pagamentos e dados de consumo ,
             tornando sua operação mais ágil e precisa. Confira:
-          </h2>
-        </div>
-      </Section>
-      <Section>
-        <TableContainer>
+          </h2> */}
+    <CardContainer>
+      {features.map((feature, i) => (
+        <Card key={i} highlight={feature.highlight}>
+          <Icon>{feature.icon}</Icon>
+          <p>{feature.text}</p>
+        </Card>
+      ))}
+    </CardContainer>
+        {/* <TableContainer>
           <Table>
             <Column>
               <TitleColumn className="problems">
@@ -90,8 +107,9 @@ const Solutions = () => {
               </List>
             </Column>
           </Table>
-        </TableContainer>
-      </Section>
+        </TableContainer> */}
+      </Container>
+      </Container>
       <div>
         <h1
           style={{
@@ -110,7 +128,8 @@ const Solutions = () => {
         color={'var(--color-primary)'}
         text="Fale com um especialista"
       />
-    </Container>
+    </Section>
+    </>
   )
 }
 
