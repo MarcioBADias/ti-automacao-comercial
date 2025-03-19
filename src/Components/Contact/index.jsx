@@ -17,6 +17,7 @@ import { Icon } from './styles'
 const schema = Yup.object().shape({
   fullName: Yup.string().required('Campo obrigatório'),
   whatsapp: Yup.string()
+    .transform((value) => value.replace(/[\s\-\(\)]/g, ''))
     .matches(/^\d{11}$/, 'Deve ter 11 dígitos')
     .required('Campo obrigatório'),
   email: Yup.string().email('E-mail inválido').required('Campo obrigatório'),
