@@ -88,6 +88,11 @@ export const Button = styled.button`
     background: var(--color-primary);
   }
 
+  &:focus {
+    outline: none;
+    background: var(--color-primary);
+  }
+
   @media (max-width: 840px) {
     margin-bottom: 2rem;
   }
