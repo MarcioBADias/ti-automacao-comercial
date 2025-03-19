@@ -55,7 +55,7 @@ const Contact = () => {
 
   const handleSubmit = (values, { resetForm }) => {
     sendMail(values)
-    const message = `Olá, me chamo ${values.fullName} ! Gostaria de mais informações. Seguem meus dados:
+    const message = `Olá, me chamo *${values.fullName}* ! Gostaria de mais informações. Seguem meus dados:
         
     *Nome:* ${values.fullName}
     *WhatsApp:* ${values.whatsapp}
