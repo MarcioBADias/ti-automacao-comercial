@@ -20,7 +20,7 @@ const schema = Yup.object().shape({
     .matches(/^\d{11}$/, 'Deve ter 11 dígitos')
     .required('Campo obrigatório'),
   email: Yup.string().email('E-mail inválido').required('Campo obrigatório'),
-  instagram: Yup.string().required('Campo obrigatório'),
+  instagram: Yup.string()
 })
 
 const Contact = () => {
