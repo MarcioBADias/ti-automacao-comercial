@@ -59,15 +59,14 @@ export const TextCard = styled.p`
 export const ImageContainer = styled.div`
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
 `
 
 export const ImageHightlight = styled.img`
-  height: 400px;
-  width: 600px;
+  height: 315px;
+  width: 520px;
 
   @media (min-width: 840px) {
-    margin: 8% 0 0 30%;
     min-height: 600px;
     min-width: 700px;
   }
