@@ -34,6 +34,7 @@ export const ImageHightlight = styled.img`
   margin-bottom: 2rem;
   @media (min-width: 840px) {
     margin-bottom: 0;
-    min-width: 550px;
+    min-width: 1000px;
+    padding-left: 7rem;
   }
 `
