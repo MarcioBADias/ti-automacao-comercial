@@ -60,7 +60,9 @@ const Footer = () => {
         </FooterSection>
       </FooterContent>
       <p>&copy; 2025 TI Automacoes. Todos os direitos reservados.</p>
-      <p style={{ marginTop: '-25px', fontSize: 15 }}>Desenvolmineto Web Marcio Dias</p>
+      <p style={{ marginTop: '-25px', fontSize: 15 }}>
+        Desenvolvimento Web: Marcio Dias
+      </p>
     </FooterContainer>
   )
 }

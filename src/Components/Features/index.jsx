@@ -21,7 +21,7 @@ const Features = () => {
   ]
 
   return (
-    <FeaturesContainer id='features'>
+    <FeaturesContainer id="features">
       <h2>Funcionalidades do Sistema</h2>
       <FeaturesWrapper>
         {featureList.map((feature, index) => (
@@ -31,7 +31,7 @@ const Features = () => {
           </FeatureCard>
         ))}
       </FeaturesWrapper>
-      <ScrollBtn text='Como começar a usar o PDV Legal' />
+      <ScrollBtn text="Como começar a usar o PDV Legal?" />
     </FeaturesContainer>
   )
 }
