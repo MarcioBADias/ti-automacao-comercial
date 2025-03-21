@@ -29,7 +29,7 @@ const Home = () => {
       </div>
       <ImageContainer>
         <ImageHightlight
-          src="/PDV_Legal_Destaque.png"
+          src="/auto.png"
           alt="Maquininha"
           className="logo_art"
         />
