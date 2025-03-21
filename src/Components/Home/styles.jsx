@@ -31,7 +31,9 @@ export const ImageContainer = styled.div`
 `
 
 export const ImageHightlight = styled.img`
+  margin-bottom: 2rem;
   @media (min-width: 840px) {
+    margin-bottom: 0;
     min-width: 550px;
   }
 `
