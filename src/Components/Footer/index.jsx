@@ -43,7 +43,7 @@ const Footer = () => {
               <FaInstagram style={{ color: '#ffffff' }} />
             </a>
             <a
-              href="https://wa.me/5522999866001"
+              href="https://wa.me/5521996526895"
               target="_blank"
               rel="noopener noreferrer"
             >

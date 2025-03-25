@@ -21,6 +21,7 @@ const schema = Yup.object().shape({
     .matches(/^\d{11}$/, 'Deve ter 11 dígitos')
     .required('Campo obrigatório'),
   email: Yup.string().email('E-mail inválido').required('Campo obrigatório'),
+  contactFrom: Yup.string().required('Campo obrigatório'),
   instagram: Yup.string()
 })
 
@@ -32,6 +33,7 @@ const Contact = () => {
       fullname: values.fullName,
       whatsapp: values.whatsapp,
       email: values.email,
+      contactFrom: values.contactFrom,
       instagram: values.instagram,
     }
     emailjs
@@ -60,6 +62,7 @@ const Contact = () => {
     *Nome:* ${values.fullName}
     *WhatsApp:* ${values.whatsapp}
     *E-mail:* ${values.email}
+    *Você nos conheceu pelo(a):* ${values.contactFrom}
     *Instagram:* ${values.instagram}`;
       
     const phoneNumber = "5521996526895";
@@ -76,6 +79,7 @@ const Contact = () => {
           fullName: '',
           whatsapp: '',
           email: '',
+          contactFrom: '',
           instagram: '',
         }}
         onSubmit={handleSubmit}
@@ -103,6 +107,11 @@ const Contact = () => {
               <Field as={Input} name="whatsapp" type="text" placeholder="Insira o número do Whatsapp" />
               {errors.whatsapp && touched.whatsapp && (
                 <ErrorMessage>{errors.whatsapp}</ErrorMessage>
+              )}
+
+              <Field as={Input} name="contactFrom" type="text" placeholder="Como nos conheceu" />
+              {errors.contactFrom && touched.contactFrom && (
+                <ErrorMessage>{errors.contactFrom}</ErrorMessage>
               )}
 
               <Field as={Input} name="instagram" type="text" placeholder="Instagram" />
