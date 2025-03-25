@@ -12,7 +12,7 @@ const Footer = () => {
     <FooterContainer>
       <FooterContent>
         <FooterSection>
-          <h3>TI Automacoes</h3>
+          <h3>TI Automação</h3>
           <p>Transformando o futuro dos negócios com soluções de automação.</p>
           <p>Endereço: Av. Henrique Terra, 926 - sala 103 - Portinho</p>
           <p>Cabo Frio - RJ, 28915-115</p>
@@ -36,14 +36,7 @@ const Footer = () => {
           <h3>Redes Sociais</h3>
           <SocialMediaIcons>
             <a
-              href="https://www.facebook.com"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FaFacebook style={{ color: '#ffffff' }} />
-            </a>
-            <a
-              href="https://www.twitter.com"
+              href="https://www.instagram.com/ti_automacao/"
               target="_blank"
               rel="noopener noreferrer"
             >

@@ -39,9 +39,6 @@ export const FooterSection = styled.div`
     color: white;
     margin-bottom: 10px;
     text-decoration: none;
-    &:hover {
-      color: #f24e1e;
-    }
   }
 `
 
